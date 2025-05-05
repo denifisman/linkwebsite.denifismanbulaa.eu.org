@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kumpulan Link Website</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #000000;             /* AMOLED true black */
+      --container-bg: rgba(0, 0, 0, 0.8);
+      --text-color: #E0E0E0;
+      --link-color: #03DAC6;
+      --accent-color: #BB86FC;
+      --hover-bg: rgba(255, 255, 255, 0.05);
+      --ripple-color: rgba(255, 255, 255, 0.1);
+      --radius: 16px;
+      --transition: 0.3s ease;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', system-ui, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      padding: 2rem;
+      background-image: radial-gradient(circle at top left, #111111, #000000);
+    }
+    .container {
+      width: 100%; max-width: 900px;
+      background: var(--container-bg);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+      overflow: auto;
+      backdrop-filter: blur(10px);
+    }
+    header {
+      padding: 1.5rem;
+      text-align: center;
+    }
+    /* Marquee Header */
+    .marquee {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: marquee 12s linear infinite;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+    @keyframes marquee { 0% { transform: translateX(100%);} 100% { transform: translateX(-100%);} }
+    table {
+      width: 100%; border-collapse: collapse;
+    }
+    /* Remove ruler (border under header) */
+    thead th {
+      padding: 1rem;
+      text-align: left;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: transparent;
+      color: var(--text-color);
+      border-bottom: none;
+    }
+    tbody tr {
+      position: relative;
+      overflow: hidden;
+      transition: background var(--transition), transform var(--transition);
+      cursor: pointer;
+    }
+    tbody tr:nth-child(odd) { background: rgba(255,255,255,0.02); }
+    tbody tr:hover { background: var(--hover-bg); transform: scale(1.02); }
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      color: var(--text-color);
+    }
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+    a::after {
+      content: '';
+      position: absolute;
+      width: 0%; height: 2px;
+      bottom: 0; left: 0;
+      background: var(--accent-color);
+      transition: width var(--transition);
+    }
+    a:hover::after { width: 100%; }
+    tbody tr:after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background: var(--ripple-color);
+      transform: scale(0);
+      opacity: 0;
+      pointer-events: none;
+    }
+    tbody tr:active:after {
+      transform: scale(4);
+      opacity: 1;
+      transition: transform 0.4s, opacity 0.8s;
+    }
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+    }
+    @media (max-width: 600px) {
+      .container { overflow-x: auto; }
+      table { display: table; }
+      thead { display: table-header-group; }
+      tbody td { display: table-cell; padding: 0.75rem 0.5rem; }
+      tbody td::before { content: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, a, tbody tr { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header><span class="marquee">✨ Kumpulan Link Website ✨</span></header>
+    <table>
+      <thead><tr><th>Nama Website</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td>Hostry</td><td><a href="https://hostry.com/login/" target="_blank">hostry.com</a></td></tr>
+		<tr><td>Cloudflare</td><td><a href="https://www.cloudflare.com/" target="_blank">cloudflare.com</a></td></tr>
+        <tr><td>Nic.eu.org</td><td><a href="https://nic.eu.org/arf/en/login/" target="_blank">nic.eu.org</a></td></tr>
+        <tr><td>GitHub</td><td><a href="https://github.com" target="_blank">github.com</a></td></tr>
+        <tr><td>ByetHost</td><td><a href="https://byet.host/" target="_blank">byet.host</a></td></tr>
+        <tr><td>Infinityfree</td><td><a href="https://dash.infinityfree.com/login" target="_blank">infinityfree.com</a></td></tr>
+		<tr><td>Dynu.com</td><td><a href="https://www.dynu.com/" target="_blank">dynu.com</a></td></tr
+		<tr><td>Cloudns.net</td><td><a href="https://www.cloudns.net/" target="_blank">cloudns.net</a></td></tr
+		<tr><td>Ifastnet.com</td><td><a href="https://ifastnet.com//" target="_blank">ifastnet.com</a></td></tr
+      </tbody>
+    </table>
+  </div>
+  <footer>&copy; 2025 Deni Fisman | Kumpulan Link. All rights reserved.</footer>
+</body>
+</html>
